@@ -13,18 +13,18 @@
     <title>Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="navbar.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="../js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,9 +34,7 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-       <img src="partyheader.jpg" alt="PartyPeople" style="width:100%;height:auto; padding-left: 20%; padding-right: 20%">
-      </div>
+   
 
     <div class="container">
 
@@ -50,7 +48,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="index.html">mello.ml</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -72,8 +70,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <ul class="nav navbar-nav">
-              <li class="active"><a href="login.html">Login</a></li>
-              <li><a href="register.html">Register</a></li>
+              <li class="active"><p method="post" action="app/getuser.php" value="$username"></li>
+              <li><a href="index.html">Logout</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -81,32 +79,9 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <div class="container" method="post" action="app/getuser.php">
-	<div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Login</h3>
-                </div>
-                <div class="panel-body">
-                    <form class="form-horizontal" method="post" action="app/getuser.php">
-                        <fieldset>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="username" name="username" type="text" autofocus>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                            </div>
-                            <!-- Change this to a button or input when using this as a form -->
-                            <input id="submit" name="submit" type="submit" value="Login"  class="btn btn-primary" role="button" aria-disabled="true">
-                            
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+       
+      </div>
+          
     </div> <!-- /container -->
 
 
@@ -115,8 +90,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
