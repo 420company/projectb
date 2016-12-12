@@ -21,6 +21,8 @@ pass VARCHAR(30) NOT NULL
 $username = $_POST["username"];
 $password = $_POST["password"];
 
+
+
 $sql = "SELECT id, username, email FROM users";
 $result = $conn->query($sql);
 
@@ -31,19 +33,13 @@ if ($result->num_rows > 0) {
             /*echo $row["username"];*/
             header("Location: ../admin/dashboard.html");
         }
-        if ($row["pass"] == $password) {
-            header("Location: ../admin/dashboard.html");
-        }
-       
-        /*echo "id: " . $row["id"]. " - Username: " . $row["username"]. " " . $row["email"]. "<br>";*/
+        if (password_verify($password, $row["pass"])) {
+             echo $row["pass"];
+        } else {
+             echo 'Invalid password or username.';             
+             break;
+          }
     }
-    
-    }
-     if ($row["pass"] !== $password) {
-            echo "WRONG PASSWORD OR USER NAME";
-        
-} else {
-    echo "0 results";
 }
 
 $conn->close();

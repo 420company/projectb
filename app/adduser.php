@@ -5,7 +5,12 @@ include 'config.php';
 
 $username = $_POST["username"];
 $email = $_POST["email"];
-$password = $_POST["passwordinput"];
+
+$options = [
+    'cost' => 12,
+];
+
+$password = password_hash ($_POST["password"] , PASSWORD_BCRYPT , $options);
 var_dump($username);
 var_dump($email);
 var_dump($password);
